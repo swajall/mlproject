@@ -2,11 +2,10 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      python: 3.11
     commands:
-      - pip install --upgrade pip
-      - pip install --upgrade setuptools wheel
+      - pyenv install 3.9.18 --skip-existing
+      - pyenv global 3.9.18
+      - pip install --upgrade pip setuptools wheel
   build:
     commands:
       - pip install -r requirements.txt
