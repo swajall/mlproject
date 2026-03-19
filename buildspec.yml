@@ -5,10 +5,12 @@ phases:
     commands:
       - pyenv install 3.9.18 --skip-existing
       - pyenv global 3.9.18
+      - export PATH="$HOME/.pyenv/versions/3.9.18/bin:$PATH"
       - python --version
       - pip install --upgrade pip setuptools wheel
   build:
     commands:
+      - export PATH="$HOME/.pyenv/versions/3.9.18/bin:$PATH"
       - pip install -r requirements.txt
 
 artifacts:
